@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/itemlist_rs_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp"
+        android:layout_margin="10dp"
+        android:background="#DFEEEA">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/tv_nama_rs"
+                android:fontFamily="@font/coiny_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="RS Jelitaaa"
+                android:textSize="22dp"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:id="@+id/alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat : "
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/tv_nama_rs"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/alamat"
+                android:layout_below="@+id/tv_nama_rs"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:text="Jalan Se ai du auwd nau aun uanwud as hduah udha sh uihauw "/>
+
+            <Button
+                android:id="@+id/btn_maps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maps"
+                android:layout_below="@id/tv_alamat"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="5dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

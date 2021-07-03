@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragment.KasusFragment"
+    android:background="#CEE5D0">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="#5E8B7E">
+
+            <RelativeLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#A7C4BC">
+
+                <TextView
+                    android:id="@+id/judul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kasus Covid-19\nJawa Barat"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="35dp"
+                    android:fontFamily="@font/alfa_slab_one_regular"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/namanim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="[ Latief Irfansyah | 124190056 ]"
+                    android:textSize="17dp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/judul"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/ic_baseline_people_alt_24"
+            android:layout_below="@+id/cv"
+            android:layout_marginLeft="14dp"/>
+
+        <TextView
+            android:id="@+id/terkonfir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="4dp"
+            android:text="Total Terkonfirmasi : "
+            android:layout_below="@+id/cv"
+            android:layout_toRightOf="@+id/img"/>
+
+        <TextView
+            android:id="@+id/tv_jumlah_terkonfirmasi_atas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="2dp"
+            android:text="2.230.000"
+            android:layout_below="@+id/cv"
+            android:layout_toRightOf="@+id/terkonfir"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp"
+            android:text="Kasus"
+            android:layout_below="@+id/cv"
+            android:layout_toRightOf="@+id/tv_jumlah_terkonfirmasi_atas"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragmentkasus_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_list"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_kasus"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressTint="#A7C4BC"
+        android:layout_below="@+id/rl"
+        android:layout_marginTop="200dp"/>
+
+</RelativeLayout>
